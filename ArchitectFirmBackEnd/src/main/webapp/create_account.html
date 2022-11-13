@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/create_account.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="image">
+        <img src="images/lady.svg" alt="Lady_Image"/>
+    </div>
+
+    <div class="form">
+
+        <div class="button">
+            <h1>Create An User Account</h1>
+        </div>
+
+        <form method="POST" class="input-group" action="custo-register">
+
+            <input type="text" class="input-field" name="first_name" placeholder="First Name" required>
+            <br><br>
+            <input type="text" class="input-field" name="last_name" placeholder="Last Name" required>
+            <br><br>
+            <input type="text" class="input-field" name="email" placeholder="Email Id" required>
+            <br><br>
+            <input type="text" class="input-field" name="phone_no" placeholder="Phone Number" required>
+            <br><br>
+
+            <span>Security Question : </span>
+            <select id="security_questions" name="security_questions" required>
+                <option value="Favorite Book">Your Favorite Book</option>
+                <option value="First Teacher">Your First Teacher</option>
+                <option value="First Vehicle">Your First Vehicle</option>
+            </select>
+
+            <input type="text" class="input-field" name="answer" placeholder="Enter Answer" required>
+
+            <br/><br/>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+    </div>
+</div>
+</body>
+
+</html>

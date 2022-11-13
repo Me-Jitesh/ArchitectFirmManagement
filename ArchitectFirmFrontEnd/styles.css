@@ -1,0 +1,203 @@
+@import 'utilities.css';
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*     Layout  Design Using Grid      */
+
+header .container {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgba(35, 7, 77, 0.7), rgba(106, 41, 212, 0.9)), url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Layout For Its Child */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 90%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 75%, 0 100%);
+}
+
+header .container .nav_div {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+
+header .titel_img_div {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+    /* Layout For Its Child */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+}
+
+header .titel_img_div .img_div {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+}
+
+header .titel_img_div .welcome_div {
+    grid-row: 1/-1;
+    grid-column: 2/-1;
+    /* Layout For Its Child */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+}
+
+header .welcome_div .heading {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+
+header .welcome_div .login_btn {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+}
+
+/*        Setting  Property  Of Elements        */
+
+header .container .nav_div nav ul li {
+    list-style-type: none;
+}
+
+header .container .nav_div nav ul li a {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    padding: 2px 40px;
+    background-color: transparent;
+    border: 2px groove var(--ternary);
+    border-radius: 30px;
+    font-size: 1.5vh;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--light);
+    font-family: pop;
+    display: block;
+}
+
+header .container .nav_div nav ul li a:hover {
+    background-color: var(--ternary);
+    color: var(--dark);
+    border: 2px groove var(--light);
+    border-radius: 30px;
+    font-size: 1.5vh;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+header .titel_img_div .img_div img {
+    height: 60vh;
+    width: 60vw;
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    transform: translate(-70%, -50%);
+    z-index: -1;
+}
+
+header .titel_img_div .welcome_div .heading h1 {
+    font-size: 3vw;
+    font-family: fancy;
+    color: var(--light);
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+header .titel_img_div .welcome_div .heading h6 {
+    font-size: 1vw;
+    font-family: fancy;
+    color: var(--light);
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+header .titel_img_div .welcome_div .login_btn ul li {
+    list-style-type: none;
+}
+
+header .titel_img_div .welcome_div .login_btn ul li a {
+    text-decoration: none;
+    color: var(--light);
+    font-family: pop;
+    display: block;
+    margin: 10px 0px;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px groove var(--ternary);
+    border-radius: 30px;
+    font-size: 1.5vh;
+    text-align: center;
+    width: 35vw;
+    cursor: pointer;
+}
+
+header .titel_img_div .welcome_div .login_btn ul li a:hover {
+    list-style-type: none;
+    margin: 10px 0px;
+    padding: 5px;
+    background-color: var(--ternary);
+    color: var(--dark);
+    border: 2px groove var(--light);
+    border-radius: 30px;
+    text-align: center;
+    width: 35vw;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+@media only screen and (max-width: 1100px) {
+    header .titel_img_div .img_div img {
+        height: 40vh;
+        width: 40vw;
+        top: 40%;
+        left: 40%;
+    }
+    header .titel_img_div .welcome_div .heading h1 {
+        top: 25%;
+        right: 10%;
+    }
+    header .titel_img_div .welcome_div .heading h6 {
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header .container .nav_div nav ul li a {
+        padding: 2px 20px;
+    }
+    header .titel_img_div .img_div img {
+        height: 80vh;
+        width: 40vw;
+        top: 40%;
+        left: 40%;
+        transform: translate(-80%, -50%);
+    }
+    header .titel_img_div .welcome_div .heading h1 {
+        top: 30%;
+        right: 10%;
+    }
+    header .titel_img_div .welcome_div .heading h6 {
+        font-size: 2vw;
+        top: 33%;
+        right: 10%;
+    }
+    header .titel_img_div .welcome_div .login_btn ul li a {
+        margin: 1px 0px;
+        padding: 5px 2px;
+        font-size: 1.3vh;
+    }
+    header .titel_img_div .welcome_div .login_btn ul li a:hover {
+        margin: 1px 0px;
+        padding: 5px 2px;
+        font-size: 1.3vh;
+    }
+}

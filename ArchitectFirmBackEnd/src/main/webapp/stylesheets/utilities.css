@@ -1,0 +1,53 @@
+.btn {
+	padding: 0.3rem 3rem;
+	font-size: 1rem;
+	font-weight: 600;
+	border: 2px solid transparent;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50px 50px;
+}
+
+.btn:hover {
+	padding: 0.3rem 3rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--light);
+	background-color: var(--primary);
+	border: 2px solid var(--light);
+	outline: none;
+	cursor: pointer;
+	border-radius: 50px 50px;
+}
+
+:root {
+	--primary: #3a4660;
+	--secondery: #6f00ff;
+	--ternary: #51e2f5;
+	--dark: #161616;
+	--light: #ffffff;
+	--yello: #fee715ff;
+}
+
+@font-face {
+	font-family: fancy;
+	src: url(../fonts/NeonAbsoluteSans.ttf);
+}
+
+@font-face {
+	font-family: pop;
+	src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@media only screen and (max-width: 600px) {
+	.btn {
+		padding: 0.1rem 1.5rem;
+		font-size: 0.9rem;
+		font-weight: 300;
+	}
+	.btn:hover {
+		padding: 0.1rem 1.5rem;
+		font-size: 0.9rem;
+		font-weight: 300;
+	}
+}
